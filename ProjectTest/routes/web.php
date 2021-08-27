@@ -22,3 +22,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/todo', [TodoController::class,'store']);
+Route::delete('/todo/{todo}', [TodoController::class, 'destroy'])->name('todo.destroy'); 
